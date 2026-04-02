@@ -1,0 +1,28 @@
+# BERT model configuration
+# Based on BERT-base from Devlin et al., 2019
+
+model:
+  vocab_size: 30522
+  hidden_size: 768
+  num_hidden_layers: 12
+  num_attention_heads: 12
+  intermediate_size: 3072  # 4 * hidden_size
+  max_position_embeddings: 512
+  type_vocab_size: 2       # Segment A and B
+  hidden_dropout: 0.1
+  attention_dropout: 0.1
+
+pretraining:
+  batch_size: 32
+  learning_rate: 0.0001
+  warmup_steps: 10000
+  max_epochs: 5
+  mlm_probability: 0.15
+  max_seq_len: 128
+
+finetuning:
+  batch_size: 16
+  learning_rate: 0.00002
+  max_epochs: 3
+  num_classes: 2
+  max_seq_len: 128

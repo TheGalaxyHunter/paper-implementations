@@ -1,0 +1,29 @@
+# Transformer model configuration
+# Based on the "base model" from Vaswani et al., 2017
+
+model:
+  d_model: 512
+  n_heads: 8
+  n_encoder_layers: 6
+  n_decoder_layers: 6
+  d_ff: 2048
+  dropout: 0.1
+  max_seq_len: 512
+
+training:
+  batch_size: 32
+  learning_rate: 0.0001
+  warmup_steps: 4000
+  max_epochs: 20
+  label_smoothing: 0.1
+  grad_clip: 1.0
+
+data:
+  # For the synthetic copy task (default)
+  vocab_size: 50
+  seq_len: 20
+  num_samples: 10000
+
+optimizer:
+  betas: [0.9, 0.98]
+  eps: 1.0e-9

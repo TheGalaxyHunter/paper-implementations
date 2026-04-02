@@ -1,0 +1,23 @@
+# U-Net model configuration
+# Based on Ronneberger et al., 2015
+
+model:
+  in_channels: 1       # Grayscale medical images
+  out_channels: 1      # Binary segmentation
+  features: [64, 128, 256, 512]  # Channel progression in encoder
+  bilinear: false      # Use transposed convolutions (true = bilinear upsampling)
+
+training:
+  batch_size: 4
+  learning_rate: 0.001
+  max_epochs: 50
+  image_size: 256
+  dice_weight: 1.0     # Weight for Dice loss component
+  bce_weight: 1.0      # Weight for BCE loss component
+
+data:
+  num_samples: 500     # Synthetic data samples
+  train_split: 0.8
+
+optimizer:
+  weight_decay: 0.0001
