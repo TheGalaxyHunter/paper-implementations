@@ -1,3 +1,5 @@
+[![CI](https://github.com/TheGalaxyHunter/paper-implementations/actions/workflows/ci.yml/badge.svg)](https://github.com/TheGalaxyHunter/paper-implementations/actions/workflows/ci.yml)
+
 # paper-implementations
 
 **Clean PyTorch implementations of influential research papers.**
