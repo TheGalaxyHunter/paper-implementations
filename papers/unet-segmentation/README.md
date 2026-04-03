@@ -36,7 +36,7 @@ is scarce.
 ## Running
 
 ```bash
-python train.py
+uv run python papers/unet-segmentation/train.py
 ```
 
 Uses randomly generated data by default. Replace the dataset with real medical

@@ -38,13 +38,13 @@ results on eleven benchmarks.
 ### Pre-training (synthetic data for demonstration)
 
 ```bash
-python pretrain.py
+uv run python papers/bert-pretraining/pretrain.py
 ```
 
 ### Fine-tuning for classification
 
 ```bash
-python finetune.py
+uv run python papers/bert-pretraining/finetune.py
 ```
 
 ## Architecture Overview

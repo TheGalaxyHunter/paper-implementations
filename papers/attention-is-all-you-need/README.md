@@ -35,7 +35,7 @@ machine translation benchmarks.
 ## Running
 
 ```bash
-python train.py
+uv run python papers/attention-is-all-you-need/train.py
 ```
 
 The training script uses a synthetic copy task by default for quick validation.

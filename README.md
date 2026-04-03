@@ -49,14 +49,15 @@ papers/
 ### Prerequisites
 
 - Python >= 3.10
-- PyTorch >= 2.0
+- [uv](https://docs.astral.sh/uv/) (fast Python package and project manager)
 
-### Installation
+### Quick Start
 
 ```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 git clone https://github.com/TheGalaxyHunter/paper-implementations.git
 cd paper-implementations
-pip install -e .
+uv sync
 ```
 
 ### Running an Implementation
@@ -64,8 +65,7 @@ pip install -e .
 Each paper folder is self-contained. For example:
 
 ```bash
-cd papers/attention-is-all-you-need
-python train.py
+uv run python papers/attention-is-all-you-need/train.py
 ```
 
 Check each paper's `README.md` for specific instructions and expected results.
